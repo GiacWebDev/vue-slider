@@ -1,0 +1,112 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.debug-border {
+  border: 1px solid black;
+}
+
+.hide {
+  display: none;
+}
+
+.main-container {
+  width: 1000px;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 200px;
+}
+
+.slider{
+  display: flex;
+  position: relative;
+  height: 100%;
+}
+
+.items-wrapper {
+  height: 100%;
+  width: 800px;
+  background-color: aqua;
+}
+
+.thumbs-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 200px;
+  background-color: black;
+}
+
+.items-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbs-wrapper img {
+  width: 100%;
+  height: calc(100% / 5);
+  object-fit: cover;
+  opacity: .5;
+}
+
+.thumbs-wrapper img.active {
+  border: 1px solid white;
+  opacity: 1;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 85px;
+  padding: 10px 0
+}
+
+.btn-arrow {
+  color: white;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.631);
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-arrow:hover {
+  color: black;
+  background-color: white;
+}
+
+/* Con esercizio array oggetti */
+.item {
+  position: relative;
+  height: 100%;
+  width: 800px;
+}
+
+.item h2 {
+  position: absolute;
+  bottom: 70px; 
+  left: 10px;
+  color: white;
+  background: rgba(0, 0, 0, 0.7); 
+  padding: 10px;
+  width: 90%;
+}
+
+.item p {
+  position: absolute;
+  bottom: 10px; 
+  left: 10px;
+  color: white;
+  background: rgba(0, 0, 0, 0.7); 
+  padding: 10px;
+  width: 90%;
+}
