@@ -25,9 +25,10 @@
  <!-- PARTE SLIDES -->
 
     <div class="slider">
-
+       
       <div class="items-wrapper">
-        <img class="item" src="img/01.webp" alt="spiderman">
+        <!-- uso un ciclo v-for per prendere tutte le slide fatte = 5 -->
+        <img v-for="slide in slides" class="item" :src="`img/${slide.image}`" :alt="slide.image">
       </div>
 
 

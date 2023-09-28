@@ -1,7 +1,8 @@
 /*
 1 - inserire elementi HTML dentro #App
 2 - creare su JS const { createApp } e struttura Vue
-3
+3 - configuro la img con vue 
+
 */
 
 const { createApp } = Vue;
@@ -38,8 +39,15 @@ createApp({
         title: "Marvel's Avengers",
         text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
       },
-    ]
+    ],
+
+    counter: 0 // counter è un dato e lo inserisco dei data
   }
+  },
+
+  methods: {
+
+
   },
 
   mounted() {
