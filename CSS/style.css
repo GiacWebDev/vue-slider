@@ -91,7 +91,7 @@
   width: 800px;
 }
 
-.item h2 {
+.items-wrapper h2 {
   position: absolute;
   bottom: 70px; 
   left: 10px;
@@ -101,7 +101,7 @@
   width: 90%;
 }
 
-.item p {
+.items-wrapper p {
   position: absolute;
   bottom: 10px; 
   left: 10px;
