@@ -28,7 +28,7 @@
        
       <div class="items-wrapper">
         <!-- uso un ciclo v-for per prendere tutte le slide fatte = 5 -->
-        <img v-for="(slide, index) in slides" class="item" :src="`img/${slide.image}`" :alt="slide.image">
+        <img v-for="slide in slides" class="item" :class="{'active' : index === counter}" :src="`img/${slide.image}`" :alt="slide.image">
       </div>
 
 
@@ -44,11 +44,11 @@
       <!-- BOTTONI -->
       <div class="buttons">
 
-        <div @click="counter--" class="btn-arrow prev">
+        <div @click="nextPrev(false)" class="btn-arrow prev">
           <i class="fa-solid fa-chevron-up"></i>
         </div>
 
-        <div @click="counter++" class="btn-arrow next">
+        <div @click="nextPrev(true)" class="btn-arrow next">
           <i class="fa-solid fa-chevron-down"></i>
         </div>
 

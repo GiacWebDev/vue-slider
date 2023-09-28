@@ -3,6 +3,7 @@
 2 - creare su JS const { createApp } e struttura Vue
 3 - configuro la img con vue 
 4 - nascondere le slide e farle apparire al contatore
+5 - @click counter
 
 
 */
@@ -44,13 +45,25 @@ createApp({
     ],
 
     counter: 0, // counter è un dato e lo inserisco dei data
+    isNext: true
 
   }
   },
 
+
   methods: {
-  
+
+    nextPrev(isNext) {
+      if(isNext) {
+        console.log('avanti');
+      } else {
+        console.log('indietro')
+      }
+    }
+
+
   },
+
 
   mounted() {
     console.log(this.slides);
