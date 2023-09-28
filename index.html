@@ -28,17 +28,25 @@
        
       <div class="items-wrapper">
         <!-- uso un ciclo v-for per prendere tutte le slide fatte = 5 -->
-        <img v-for="slide in slides" class="item" :class="{'active' : index === counter}" :src="`img/${slide.image}`" :alt="slide.image">
+        <img v-for="slide in slides" class="item" :src="`img/${slide.image}`" :alt="slide.image">
       </div>
 
 
      <!-- THUMBNAIL -->
       <div class="thumbs-wrapper">
-        <img class="thumb" src="img/01.webp" alt="img">
-        <img class="thumb active" src="img/02.webp" alt="img">
+        <img
+        :key="index"
+        class="thumb" 
+        :src="`img/${slide.image}`"
+        alt="img"
+        v-for="(slide, index) in slides"
+        :class="{active: currentImageIndex === index}"
+        >
+
+        <!-- <img class="thumb active" src="img/02.webp" alt="img">
         <img class="thumb" src="img/03.webp" alt="img">
         <img class="thumb" src="img/04.webp" alt="img">
-        <img class="thumb" src="img/05.webp" alt="img">
+        <img class="thumb" src="img/05.webp" alt="img"> -->
       </div>
 
       <!-- BOTTONI -->
