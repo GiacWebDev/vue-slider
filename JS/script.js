@@ -2,8 +2,9 @@
 1 - inserire elementi HTML dentro #App
 2 - creare su JS const { createApp } e struttura Vue
 3 - configuro la img con vue 
-4 - nascondere le slide e farle apparire al aumento o meno del contatore
+4 - nascondere le slide e farle apparire al aumento o meno del contatore con classe hide
 5 - @click counter
+6 - funzione showImage
 
 
 */
@@ -54,29 +55,33 @@ createApp({
 
 methods: {
   
-    nextPrev(isNext) {
-
-      if(isNext) {
-        this.currentImageIndex++;   
-        console.log('avanti');
-
-
-      } else {
-        this.currentImageIndex--;
-        console.log('indietro')
-      }
-    },
-
-    showImage(index) {
-      this.currentImageIndex = index
+  nextPrev(isNext) {
+    if (isNext) {
+      this.currentImageIndex++;
+      console.log('avanti');
+    } else {
+      this.currentImageIndex--;
+      console.log('indietro');
     }
-
+  
+    if (this.currentImageIndex < 0) {
+      this.currentImageIndex = this.slides.length - 1;
+    } else if (this.currentImageIndex === this.slides.length) {
+      this.currentImageIndex = 0;
+    }
   },
-
+  
+  
+  showImage(index) {
+    this.currentImageIndex = index;
+  },
+  
 
   mounted() {
     console.log(this.slides);
   }
+}
+
 
 }).mount('#app');
 
